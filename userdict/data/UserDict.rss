@@ -1,0 +1,526 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:     Resources for Japanese user dictionary.
+*
+*/
+
+
+
+
+
+
+//  RESOURCE IDENTIFIER
+NAME    UDIC
+
+//  INCLUDES
+#include "UserDict.hrh"
+#include <userdict.loc>
+#include <eikon.rh>
+#include <avkon.loc>
+#include <avkon.rsg>
+#include <avkon.hrh>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <appinfo.rh>
+#include <data_caging_paths_strings.hrh>
+
+//  CONSTANTS
+
+//  RESOURCE DEFINITIONS
+// -----------------------------------------------------------------------------
+//
+//    RSS_SIGNATURE
+//    Standard resource signature.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+    {
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    TBUF
+//    Application caption and default filename.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF
+    {
+    buf = "";
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    EIK_APP_INFO
+//    Application info.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    }
+
+
+// -----------------------------------------------------------------------------
+//
+//    LOCALISABLE_APP_INFO
+//    Application info.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO r_udict_localisable_app_info
+    {
+    short_caption = qtn_apps_udict_grid;
+    caption_and_icon =
+    CAPTION_AND_ICON_INFO
+        {
+        caption = qtn_apps_udict_list;
+#ifdef __SCALABLE_ICONS
+        number_of_icons = 1;
+        icon_file = APP_BITMAP_DIR"\\userdict_aif.mif";
+#else // !__SCALABLE_ICONS
+        number_of_icons = 2;
+        icon_file = APP_BITMAP_DIR"\\userdict_aif.mbm";
+#endif // __SCALABLE_ICONS
+        };
+    }
+
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_view_cba_softkey_open
+//    View's softkey resources. MSK is "open" command.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_udict_view_cba_softkey_open
+    {
+    buttons =
+        {
+        CBA_BUTTON {id=EAknSoftkeyOptions; txt = text_softkey_option;},
+        CBA_BUTTON {id=EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON {id=EUserDictCmdOpen; txt = qtn_msk_open;}
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_view_cba_softkey_newword
+//    View's softkey resources. MSK is "New word" command.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_udict_view_cba_softkey_newword
+    {
+    buttons =
+        {
+        CBA_BUTTON {id=EAknSoftkeyOptions; txt = text_softkey_option;},
+        CBA_BUTTON {id=EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON {id=EUserDictCmdNewWord; txt = qtn_msk_newword;}
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_view_cba_softkey_contextoptions
+//    View's softkey resources. MSK is "context options" command.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_udict_view_cba_softkey_contextoptions
+    {
+    buttons =
+        {
+        CBA_BUTTON {id=EAknSoftkeyOptions; txt = text_softkey_option;},
+        CBA_BUTTON {id=EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON {id=EAknSoftkeyContextOptions; txt = text_softkey_option;}
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_view_cba_softkey_empty
+//    View's softkey resources. All softkeys are empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_udict_view_cba_softkey_empty
+    {
+    buttons =
+        {
+        CBA_BUTTON {id=EAknSoftkeyEmpty; txt=text_softkey_empty;},
+        CBA_BUTTON {txt=text_softkey_empty;},
+        CBA_BUTTON {id=EAknSoftkeyEmpty; txt=text_softkey_empty;}
+        };
+    }
+
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_view
+//    View's main resources.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_udict_view
+    {
+    menubar = r_udict_menubar_view;
+    cba = r_udict_view_cba_softkey_empty;
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_menubar_view
+//    View's default menu bar.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_udict_menubar_view
+    {
+    titles=
+        {
+        MENU_TITLE
+            {
+            menu_pane = r_udict_base_menu;
+            txt = "";
+            },
+        MENU_TITLE
+            {
+            menu_pane =
+                R_AVKON_MENUPANE_MARKABLE_LIST_EDIT_LIST_IMPLEMENTATION;
+            txt = "";
+            },
+        MENU_TITLE
+            {
+             menu_pane = r_udict_app_menu;
+             txt = "";
+            }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_base_menu
+//    Application basic menu.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_udict_base_menu
+    {
+    items=
+        {
+        MENU_ITEM
+            {
+            command = EAknCmdHelp;
+            txt = qtn_options_help;
+            },
+        MENU_ITEM
+            {
+            command = EAknCmdExit;
+            txt = qtn_options_exit;
+            }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_app_menu
+//    Japanese user dictionary default menu.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_udict_app_menu
+    {
+    items=
+        {
+        MENU_ITEM
+            {
+            command = EUserDictCmdOpen;
+            txt = qtn_udict_options_open;
+            },
+        MENU_ITEM
+            {
+            command = EUserDictCmdNewWord;
+            txt = qtn_udict_options_new;
+            },
+        MENU_ITEM
+            {
+            command = EUserDictCmdDelete;
+            txt = qtn_udict_options_delete;
+            }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_menubar_view_context
+//    View's context sensitive menu bar.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_udict_menubar_view_context
+    {
+    titles=
+        {
+
+        MENU_TITLE
+            {
+            menu_pane =
+                R_AVKON_MENUPANE_MARKABLE_LIST_EDIT_LIST_IMPLEMENTATION;
+            txt = "";
+            },
+        MENU_TITLE
+            {
+            menu_pane = r_udict_app_menu_context;
+            txt = "";
+            }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_app_menu_context
+//    Context sensitive menu.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_udict_app_menu_context
+    {
+    items=
+        {
+        MENU_ITEM
+            {
+            command = EUserDictCmdNewWord;
+            txt = qtn_udict_options_new;
+            },
+        MENU_ITEM
+            {
+            command = EUserDictCmdDelete;
+            txt = qtn_udict_options_delete;
+            }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_softkeys_done_cancel_done
+//    softkey definition of Japanese user dictionary editor for MSK.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_udict_softkeys_done_cancel_done
+    {
+    buttons =
+        {
+        CBA_BUTTON { id=EAknSoftkeyDone; txt=text_softkey_done; },
+        CBA_BUTTON { id=EAknSoftkeyCancel; txt=text_softkey_cancel; },
+        CBA_BUTTON { id=EAknSoftkeyDone; txt=text_softkey_done; }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_softkeys_empty_cancel_empty
+//    softkey definition of Japanese user dictionary editor for MSK.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_udict_softkeys_empty_cancel_empty
+    {
+    buttons =
+        {
+        CBA_BUTTON { id=EAknSoftkeyEmpty; txt=text_softkey_empty;},
+        CBA_BUTTON { id=EAknSoftkeyCancel; txt=text_softkey_cancel;},
+        CBA_BUTTON { id=EAknSoftkeyEmpty; txt=text_softkey_empty;}
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_dialog_edit
+//    Japanese user dictionary editor.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_udict_dialog_edit
+    {
+    flags =
+        EEikDialogFlagWait | EEikDialogFlagNoBorder |
+        EEikDialogFlagNoDrag  | EEikDialogFlagNoTitleBar |
+        EEikDialogFlagFillAppClientRect | EEikDialogFlagCbaButtons;
+    buttons = r_udict_softkeys_done_cancel_done;
+    form = r_udict_form;
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_form
+//    Form resource of Japanese user dictionary editor.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE FORM r_udict_form
+    {
+    flags = EEikFormEditModeOnly | EEikFormUseDoubleSpacedFormat;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EEikCtEdwin;
+            prompt = qtn_udict_lbl_word ;
+            id = EUserDictWordEdwin;
+            itemflags = EEikDlgItemSeparatorBefore | EEikDlgItemTakesEnterKey;
+            control = EDWIN
+                {
+                flags = KMultiLineExpandingEditorFlags
+                       | EEikEdwinNoAutoSelection | EEikEdwinJustAutoCurEnd
+                       | EEikEdwinNoLineOrParaBreaks;
+                maxlength = EUseDictWordBuffer;
+                width = 6;
+                default_input_mode = EAknEditorHiraganaKanjiInputMode;
+                avkon_flags = EAknEditorFlagEnablePictographInput;
+                base_line_delta = 21;
+                };
+            tooltip="";
+            },
+        DLG_LINE
+            {
+            type = EEikCtEdwin;
+            prompt = qtn_udict_lbl_reading;
+            id = EUserDictReadingEdwin;
+            itemflags = EEikDlgItemSeparatorBefore | EEikDlgItemTakesEnterKey;
+            control = EDWIN
+                {
+                flags = KMultiLineExpandingEditorFlags
+                       | EEikEdwinNoAutoSelection | EEikEdwinJustAutoCurEnd
+                       | EEikEdwinNoLineOrParaBreaks;
+                maxlength = EUseDictReadingBuffer;
+                width = 6;
+                allowed_input_modes = EAknEditorHiraganaInputMode;
+                default_input_mode = EAknEditorHiraganaInputMode;
+                base_line_delta = 21;
+                };
+            tooltip = "";
+            }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_delete_query
+//    Deletion confirmation query.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_udict_delete_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EUserDictDeleteQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                label = qtn_udict_note_delete_word;
+                };
+            }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_wait_note
+//    Wait note for Deleting words.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_udict_wait_note
+    {
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EUserDictDeleteWaitNote;
+            control= AVKON_NOTE
+                {
+                layout = EWaitLayout;
+                singular_label = qtn_fldr_deleting_wait_note;
+                imagefile = AVKON_BITMAP_FILE;
+                imageid = EMbmAvkonQgn_note_voice;
+                imagemask = EMbmAvkonQgn_note_voice_mask;
+                animation =R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_delete_query_message
+//    Prompt text for the deleting words query.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_udict_delete_query_message
+    {
+    buf = qtn_udict_note_delete_words;
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_already_reg_message
+//    Information message for "the word is alredy registered."
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF64 r_udict_already_reg_message
+    {
+    buf = qtn_udict_info_already_registd;
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_invalid_1stchar_message
+//    Information message for "the first character is invalid."
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF64 r_udict_invalid_1stchar_message
+    {
+    buf = qtn_udict_info_invalid_1stchar;
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    r_udict_info_memory_full_message
+//    Information message for "the User dictionary has no space to register."
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF64 r_udict_info_memory_full_message
+    {
+    buf = qtn_udict_info_memory_full;
+    }
+
+// End of File
+
+

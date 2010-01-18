@@ -1,0 +1,103 @@
+/*
+* Copyright (c) 2002-2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:     Localised strings of Japanese user dictionary.
+*
+*/
+
+
+
+
+
+
+// LOCALISATION STRINGS
+
+//d:Caption in application shell list
+//l:list_single_large_graphic_pane_1
+//
+#define qtn_apps_udict_list "User Dictionary"
+
+//d:Caption in application shell grid
+//l:cell_app_pane_1
+//
+#define qtn_apps_udict_grid "User Dict."
+
+//d:Title pane text of the User Dictionary
+//l:title_pane_1
+//
+#define qtn_udict_title_user_dictionary "User Dictionary"
+
+//d:Menu item, editing a focused word.
+//l:list_single_popup_menu_pane_1
+//
+#define qtn_udict_options_open "Open"
+
+//d:Menu item, registering a new word.
+//l:list_single_popup_menu_pane_1
+//
+#define qtn_udict_options_new "New Word"
+
+//d:Menu item, deleting a focused word or marked words.
+//l:list_single_popup_menu_pane_1
+//
+#define qtn_udict_options_delete "Delete"
+
+//d:Prompt text for a query, deleting a focused word or only one marked word.
+//d:Operation is confirmed with this info note.
+//l:popup_note_window_1
+//
+#define qtn_udict_note_delete_word "Delete word?"
+
+//d:Prompt text for a query, deleting marked words.
+//d:Operation is confirmed with this info note.
+//d:%N is the number of marked words.
+//l:popup_note_window_1
+//
+#define qtn_udict_note_delete_words "Delete %N words?"
+
+//d:Prompt text for a word query in the user dictionary editor.
+//l:list_double_pane_1
+//
+#define qtn_udict_lbl_word "Word"
+
+//d:Prompt text for a reading query in the user dictionary editor.
+//l:list_double_pane_1
+//
+#define qtn_udict_lbl_reading "Reading"
+
+//d:Information message for saving error.
+//d:The message is shown when the word is already registered.
+//l:popup_note_window_1
+//
+#define qtn_udict_info_already_registd "Already Registered"
+
+//d:Information message for saving error.
+//d:The message is shown when the first character of the reading is invalid.
+//l:popup_note_window_1
+//
+#define qtn_udict_info_invalid_1stchar "Invalid first character"
+
+//d:Information message for saving error.
+//d:The message is shown when the User dictionary has no space to register.
+//l:popup_note_window_1
+//
+#define qtn_udict_info_memory_full "User dictionary full. Delete some data in User dictionary."
+
+//d: Text in middle soft key
+//d: This text is shown when there is no registration in User dictionary.
+//l: control_pane_t3
+//w:
+//r:3.2
+#define qtn_msk_newword "New word"
+
+// End of File
