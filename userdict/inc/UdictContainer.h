@@ -101,10 +101,9 @@ class CUserDictContainer : public CCoeControl, public MAknBackgroundProcess
         * Creates the icon and adds it to the array if it was successful
         *  @since 2.8
         */
-        void CUserDictContainer::CreateIconAndAddToArrayL(
-                                    CArrayPtr<CGulIcon>*& aIconsArray,
-                                    const TDesC& aIconFile,
-                                    TInt aBitmap, TInt aMask = -1);
+        void CreateIconAndAddToArrayL(CArrayPtr<CGulIcon>*& aIconsArray,
+                                      const TDesC& aIconFile,
+                                      TInt aBitmap, TInt aMask = -1);
 
 
     private:  // Functions from base classes
