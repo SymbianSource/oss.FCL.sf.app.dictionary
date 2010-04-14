@@ -23,7 +23,7 @@
 // INCLUDE FILES
 #include "UdictApp.h"
 #include "UdictDocument.h"
-#include <ecom.h>
+//#include <ecom.h>
 #include <implementationproxy.h>
 
 // ============================ MEMBER FUNCTIONS ===============================
