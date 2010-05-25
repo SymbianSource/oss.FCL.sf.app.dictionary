@@ -28,7 +28,7 @@
 #include "UdictApp.h"
 #include "UserDict.hrh"
 #include "udict.hlp.hrh"
-#include <UserDict.rsg>
+#include <userdict.rsg>
 #include <aknconsts.h>
 #include <aknlists.h>
 #include <eikclbd.h>

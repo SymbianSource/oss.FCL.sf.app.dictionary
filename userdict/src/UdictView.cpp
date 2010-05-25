@@ -29,7 +29,7 @@
 #include  "UdictContainer.inl"
 #include  "UdictFrm.h"
 #include  "UserDict.hrh"
-#include  <UserDict.rsg>
+#include  <userdict.rsg>
 #include  <aknViewAppUi.h>
 #include  <aknmessagequerydialog.h>
 #include  <StringLoader.h>

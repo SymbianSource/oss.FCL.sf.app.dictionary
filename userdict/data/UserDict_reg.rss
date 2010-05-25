@@ -20,7 +20,7 @@
 
 
 #include <appinfo.rh>
-#include <UserDict.rsg>
+#include <userdict.rsg>
 #include <data_caging_paths_strings.hrh>
 
 UID2 KUidAppRegistrationResourceFile

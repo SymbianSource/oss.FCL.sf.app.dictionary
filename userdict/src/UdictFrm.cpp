@@ -24,7 +24,7 @@
 #include    "UdictView.h"
 #include    "UdictElement.h"
 #include    "UserDict.hrh"
-#include    <UserDict.rsg>
+#include    <userdict.rsg>
 #include    <avkon.hrh>
 #include    <eikedwin.h>
 
