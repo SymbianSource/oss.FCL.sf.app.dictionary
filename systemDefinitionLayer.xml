@@ -1,0 +1,7 @@
+<layer name="dictionary">
+  <module name="group_dictionary">
+    <component name="group_dictionary">
+      <unit unitID="dictionary" mrp="" bldFile="&layer_real_source_path;\group" name="dictionary" />
+    </component>
+  </module>
+</layer>
