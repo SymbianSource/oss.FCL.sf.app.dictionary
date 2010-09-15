@@ -117,7 +117,7 @@ void CUserDictView::SaveL(
 void CUserDictView::ShowInformationNoteL(TInt aResourceId) const
     {
     TBuf<KMessageBuffSize> message;
-    iCoeEnv->ReadResource(message, aResourceId);
+    iCoeEnv->ReadResourceL(message, aResourceId);
     CAknInformationNote* note = new(ELeave) CAknInformationNote();
     note->ExecuteLD(message);
     }
